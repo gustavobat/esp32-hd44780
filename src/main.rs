@@ -11,9 +11,9 @@ fn main() {
 
     let mut lcd = HD44780::new_4bit(
         // Register Select pin
-        pins.gpio5.into_output().unwrap(),
-        // Enable pin
         pins.gpio18.into_output().unwrap(),
+        // Enable pin
+        pins.gpio19.into_output().unwrap(),
         // Data pins
         pins.gpio27.into_output().unwrap(),
         pins.gpio26.into_output().unwrap(),
