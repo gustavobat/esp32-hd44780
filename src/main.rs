@@ -11,7 +11,7 @@ fn main() {
 
     let mut lcd = HD44780::new_4bit(
         // Register Select pin
-        pins.gpio5.into_output().unwrap(),
+        pins.gpio19.into_output().unwrap(), 
         // Enable pin
         pins.gpio18.into_output().unwrap(),
         // Data pins
@@ -38,6 +38,6 @@ fn main() {
     lcd.set_display_mode(dm, &mut delay).unwrap();
 
     // Display the following string
-    lcd.write_str("Hello from Rust!", &mut delay).unwrap();
+    lcd.write_str("Sem conexao", &mut delay).unwrap();
 }
 
